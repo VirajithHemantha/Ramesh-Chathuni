@@ -10,38 +10,38 @@
   --color-brand-gold-light: #F3E5AB;
   --color-brand-gold-deep: #997A00;
   
-  --color-brand-primary: #8F9779; /* Sage Green */
-  --color-brand-primary-light: #C0C8AD; /* Light Sage Green */
-  --color-brand-primary-deep: #5A6348; /* Dark Sage Green */
-  --color-brand-primary-muted: #A8B092; /* Muted Sage Green */
+  --color-brand-primary: #8C7B6C; /* Taupe/Soft Brown */
+  --color-brand-primary-light: #D4C5B9; /* Light Beige/Taupe */
+  --color-brand-primary-deep: #5C4B3C; /* Deep Brown */
+  --color-brand-primary-muted: #BFAEA3; /* Muted Taupe */
   
-  --color-brand-champagne: #FDF4F5; /* Pinkish White */
-  --color-brand-ivory: #FFFFFF; /* Pure White */
-  --color-brand-pink: #F4C2C2; /* Soft Pink */
+  --color-brand-champagne: #F5EFEB; /* Soft Champagne/Beige */
+  --color-brand-ivory: #FDFCF9; /* Warm White */
+  --color-brand-pink: #E8D5CB; /* Soft Peach/Blush */
   --color-brand-white: #FFFFFF;
-  --color-brand-accent: #E8A5A5; /* Deeper Soft Pink */
-  --color-brand-dark: #2F362F; /* Dark Greenish Grey */
+  --color-brand-accent: #C2A895; /* Accent Taupe */
+  --color-brand-dark: #3A322C; /* Dark Brown */
 
   /* Church Theme */
-  --color-church-primary: #8F9779;
-  --color-church-light: #C0C8AD;
-  --color-church-bg: #F4F6F0;
+  --color-church-primary: #8C7B6C;
+  --color-church-light: #D4C5B9;
+  --color-church-bg: #FDFCF9;
   
   /* Poruwa Theme */
   --color-poruwa-primary: var(--color-brand-primary);
   --color-poruwa-light: var(--color-brand-primary-light);
-  --color-poruwa-bg: #F4F6F2; /* Soft Sage Tinted White */
+  --color-poruwa-bg: #F5EFEB; /* Soft Beige */
 
   /* Homecoming Theme */
-  --color-homecoming-primary: #800020;
-  --color-homecoming-light: #A34A58;
-  --color-homecoming-bg: #FAF5F6;
+  --color-homecoming-primary: #755B4D;
+  --color-homecoming-light: #B8A194;
+  --color-homecoming-bg: #FCFAF8;
 
   /* Oldmoney Theme for Story */
   --color-oldmoney-cream: #FFFFFF;
-  --color-oldmoney-brown: #000000;
-  --color-oldmoney-olive: #000000;
-  --color-oldmoney-taupe: #666666;
+  --color-oldmoney-brown: #3A322C;
+  --color-oldmoney-olive: #5C4B3C;
+  --color-oldmoney-taupe: #8C7B6C;
 }
 
 @layer base {

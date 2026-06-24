@@ -42,7 +42,7 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
             setTimeout(onComplete, 1000);
           }}
         >
-          <source src="/Video Project 7.mp4" type="video/mp4" />
+          <source src="/startvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 

@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
             <text>
               <textPath href="#circlePath" className="text-[8px] uppercase tracking-[0.15em] fill-brand-primary font-sans font-bold">
-                HIRUSHI & VISHWA • FOREVER AND ALWAYS •
+                CHATHUNI & RAMESH.   • FOREVER AND ALWAYS •
               </textPath>
             </text>
           </svg>

@@ -16,6 +16,8 @@ import { IntroVideo } from './components/IntroVideo';
 
 import { HeroContent } from './components/HeroContent';
 import { CornerFlowers } from './components/CornerFlowers';
+import { WelcomeMessage } from './components/WelcomeMessage';
+import { SaveTheDate } from './components/SaveTheDate';
 
 export default function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -78,7 +80,11 @@ export default function App() {
 
             <HeroContent />
 
-            <section id="countdown" className="py-16 sm:py-32 relative overflow-hidden bg-[#163F2B]">
+            <WelcomeMessage />
+            
+            <SaveTheDate />
+
+            <section id="countdown" className="py-16 sm:py-32 relative overflow-hidden bg-brand-dark">
               <CornerFlowers position="top-left" opacity={0.4} scale={1.2} />
               <CornerFlowers position="bottom-right" opacity={0.4} scale={1.2} />
               {/* Premium Background Ambient Glows */}
