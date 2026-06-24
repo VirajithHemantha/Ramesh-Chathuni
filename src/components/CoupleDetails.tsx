@@ -38,7 +38,7 @@ export const CoupleDetails: React.FC = () => {
           <div className="mb-4 flex flex-col items-center lg:items-end">
             <span className="text-brand-primary uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Groom</span>
             <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-2 drop-shadow-sm">Ramesh</h3>
-            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Son of Mr. Ghananarathna Dissanayake</p>
+            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Son of Mr. & Mrs Dissanayake</p>
           </div>
           <div className="hidden lg:flex justify-end mt-8">
             <Heart className="w-6 h-6 text-brand-pink/80 fill-brand-pink/30 transform hover:scale-110 transition-transform cursor-pointer drop-shadow-sm" />
@@ -57,9 +57,9 @@ export const CoupleDetails: React.FC = () => {
           <div className="absolute -inset-2 bg-gradient-to-b from-brand-primary/30 to-transparent rounded-[12rem_12rem_1rem_1rem] blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
           <div className="relative w-[300px] h-[400px] sm:w-[360px] sm:h-[500px] lg:w-[420px] lg:h-[580px] rounded-[12rem_12rem_16px_16px] overflow-hidden border-[6px] border-white/90 shadow-[0_20px_50px_rgba(70,130,180,0.2)] bg-brand-champagne mx-auto z-10 transition-transform duration-700 group-hover:-translate-y-2 flex flex-col items-center justify-center gap-4">
-            <img 
-              src="/images/e.jpg" 
-              alt="Couple" 
+            <img
+              src="/images/a.jpg"
+              alt="Couple"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             />
             {/* Elegant inner shadow & overlay */}
@@ -88,7 +88,7 @@ export const CoupleDetails: React.FC = () => {
           <div className="mb-4 flex flex-col items-center lg:items-start">
             <span className="text-brand-primary uppercase tracking-[0.4em] text-[10px] font-bold mb-3 block">The Bride</span>
             <h3 className="text-4xl sm:text-5xl font-display text-stone-800 mb-2 drop-shadow-sm">Chathuni</h3>
-            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Daughter of Mr. Upalakshithe Mallawaachchi</p>
+            <p className="text-stone-500/90 font-serif italic text-base sm:text-lg">Daughter of Mr. & Mrs Mallawaachchi</p>
           </div>
           <div className="hidden lg:flex justify-start mt-8">
             <Heart className="w-6 h-6 text-brand-pink/80 fill-brand-pink/30 transform hover:scale-110 transition-transform cursor-pointer drop-shadow-sm" />

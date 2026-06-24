@@ -26,6 +26,7 @@ export default function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const weddingDate = new Date('2026-08-14T09:30:00');
+  const [isClosed, setIsClosed] = useState(false);
 
   const startMusic = () => {
     if (audioRef.current && !isMusicPlaying) {
@@ -44,6 +45,27 @@ export default function App() {
       setIsMusicPlaying(!isMusicPlaying);
     }
   };
+
+  if (isClosed) {
+    return (
+      <div className="relative min-h-screen bg-brand-ivory flex items-center justify-center p-6 text-center">
+        <FloatingPetals />
+        <div className="bg-white/60 backdrop-blur-md p-10 sm:p-20 rounded-[3rem] border border-brand-primary/20 shadow-2xl relative max-w-2xl">
+          <CornerFlowers position="all" opacity={0.6} scale={1.2} />
+          <h1 className="text-4xl sm:text-6xl font-display text-brand-dark mb-6 tracking-tight drop-shadow-sm">Thank You</h1>
+          <p className="font-serif italic text-lg sm:text-xl text-stone-600 mb-10 leading-relaxed">
+            For taking the time to view our invitation. We hope to see you on our special day!
+          </p>
+          <button 
+            onClick={() => setIsClosed(false)}
+            className="px-8 py-3 rounded-full border border-brand-primary/30 text-brand-primary font-sans text-xs tracking-[0.2em] uppercase hover:bg-brand-champagne transition-all duration-300 shadow-sm"
+          >
+            Open Again
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative min-h-screen font-sans selection:bg-brand-gold selection:text-white overflow-x-hidden bg-brand-ivory">
@@ -76,11 +98,25 @@ export default function App() {
               {isMusicPlaying ? <Volume2 className="w-6 h-6" /> : <VolumeX className="w-6 h-6" />}
             </button>
 
+            {/* Close Invitation Button */}
+            <button
+              onClick={() => setIsClosed(true)}
+              className="fixed top-8 right-8 z-[60] bg-white/70 backdrop-blur-md px-6 py-2 rounded-full border border-brand-primary/30 text-brand-primary-deep font-sans text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase shadow-lg hover:bg-white hover:shadow-xl transition-all active:scale-95 flex items-center gap-2"
+            >
+              <div className="w-2 h-2 rounded-full bg-brand-pink/80" />
+              Close
+            </button>
+
 
 
             <HeroContent />
 
-            <WelcomeMessage />
+            <section id="couple" className="py-16 sm:py-32 bg-gradient-to-b from-brand-ivory via-brand-champagne to-[#F4F6F2] relative overflow-hidden">
+              <CornerFlowers position="top-right" opacity={0.6} scale={1.5} />
+              <CornerFlowers position="bottom-left" opacity={0.6} scale={1.5} />
+              <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] pointer-events-none" />
+              <CoupleDetails />
+            </section>
             
             <SaveTheDate />
 
@@ -112,22 +148,9 @@ export default function App() {
               </div>
             </section>
 
-            <section id="couple" className="py-16 sm:py-32 bg-gradient-to-b from-brand-ivory via-brand-champagne to-[#F4F6F2] relative overflow-hidden">
-              <CornerFlowers position="top-right" opacity={0.6} scale={1.5} />
-              <CornerFlowers position="bottom-left" opacity={0.6} scale={1.5} />
-              <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] pointer-events-none" />
-              <CoupleDetails />
-            </section>
-
-
-
             <section id="poruwa">
               <PoruwaEvent />
             </section>
-
-            {/* Timeline section removed entirely as requested */}
-
-
 
             <section id="addresses" className="py-16 sm:py-32 bg-gradient-to-b from-[#F4F6F2] via-brand-ivory to-brand-primary/10 relative">
               <AddressesSection />
@@ -138,6 +161,8 @@ export default function App() {
               <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-20 pointer-events-none" />
               <RSVPForm />
             </section>
+
+            <WelcomeMessage />
 
             <Footer />
           </motion.main>

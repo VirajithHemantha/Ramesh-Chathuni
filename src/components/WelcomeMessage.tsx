@@ -18,9 +18,6 @@ export const WelcomeMessage: React.FC = () => {
           transition={{ duration: 1.2, ease: "easeOut" }}
           className="bg-white/60 backdrop-blur-sm p-8 sm:p-16 rounded-3xl border border-brand-primary/20 shadow-2xl relative"
         >
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-brand-ivory px-6 py-2 rounded-full border border-brand-primary/30 shadow-md">
-            <span className="text-brand-primary uppercase tracking-[0.3em] text-xs font-semibold">Welcome</span>
-          </div>
 
           <h2 className="text-3xl sm:text-5xl font-display text-brand-dark mb-10 mt-4 italic">
             To our family and friends,

@@ -29,7 +29,7 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-10 py-6">
+    <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-10 py-6 mx-auto justify-items-center w-full max-w-[fit-content]">
       {[
         { label: 'Days', value: timeLeft.days },
         { label: 'Hours', value: timeLeft.hours },

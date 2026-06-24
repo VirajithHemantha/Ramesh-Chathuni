@@ -8,6 +8,7 @@ import { CheckCircle, Loader2, Heart, Sparkles } from 'lucide-react';
 export const RSVPForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: '',
+    isAttending: 'Yes, Joyfully Accept',
     guests: '1',
     dietaryNotes: '',
   });
@@ -23,6 +24,7 @@ export const RSVPForm: React.FC = () => {
     try {
       await submitToGoogleSheet('rsvp', {
         fullName: formData.fullName,
+        isAttending: formData.isAttending,
         guests: normalizedGuests,
         dietaryNotes: formData.dietaryNotes,
         submittedAt: new Date().toISOString(),
@@ -159,6 +161,20 @@ export const RSVPForm: React.FC = () => {
                         value={formData.fullName}
                         onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       />
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] uppercase tracking-[0.2em] font-bold text-brand-primary-deep mb-3 ml-2">Will you be attending?</label>
+                      <div className="relative group">
+                        <select
+                          className="w-full bg-white/90 px-6 py-4 rounded-full border border-brand-primary/20 focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary-light outline-none transition-all duration-300 appearance-none font-serif italic text-lg shadow-sm text-brand-dark cursor-pointer"
+                          value={formData.isAttending}
+                          onChange={(e) => setFormData({ ...formData, isAttending: e.target.value })}
+                        >
+                          <option value="Yes, Joyfully Accept">Yes, Joyfully Accept</option>
+                          <option value="No, Regretfully Decline">No, Regretfully Decline</option>
+                        </select>
+                      </div>
                     </div>
 
                     <div>

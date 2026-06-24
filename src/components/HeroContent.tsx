@@ -10,7 +10,7 @@ export const HeroContent: React.FC = () => {
       {/* Background Image with Elegant Overlays */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="absolute inset-0 bg-[url('/images/a.jpg')] bg-cover bg-center bg-no-repeat" 
+          className="absolute inset-0 bg-[url('/images/b.jpg')] bg-cover bg-center bg-no-repeat" 
         />
         <div className="absolute inset-0 bg-brand-ivory/60 backdrop-blur-[4px]" />
         <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-brand-primary/5 mix-blend-multiply" />
