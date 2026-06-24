@@ -84,27 +84,27 @@ export default function App() {
             
             <SaveTheDate />
 
-            <section id="countdown" className="py-16 sm:py-32 relative overflow-hidden bg-brand-dark">
-              <CornerFlowers position="top-left" opacity={0.4} scale={1.2} />
-              <CornerFlowers position="bottom-right" opacity={0.4} scale={1.2} />
+            <section id="countdown" className="py-16 sm:py-32 relative overflow-hidden bg-brand-primary">
+              <CornerFlowers position="top-left" opacity={0.3} scale={1.2} />
+              <CornerFlowers position="bottom-right" opacity={0.3} scale={1.2} />
               {/* Premium Background Ambient Glows */}
               <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[70%] bg-white/5 blur-[120px] rounded-full" />
-                <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[70%] bg-brand-primary-light/10 blur-[120px] rounded-full" />
+                <div className="absolute -top-[20%] -right-[10%] w-[50%] h-[70%] bg-white/10 blur-[120px] rounded-full" />
+                <div className="absolute -bottom-[20%] -left-[10%] w-[50%] h-[70%] bg-brand-champagne/10 blur-[120px] rounded-full" />
               </div>
               
               <div className="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
                 <div className="inline-flex items-center gap-4 mb-6">
-                  <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-brand-primary-light/60" />
-                  <span className="text-brand-primary-light uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">The Final Countdown</span>
-                  <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-brand-primary-light/60" />
+                  <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-brand-champagne/60" />
+                  <span className="text-brand-champagne uppercase tracking-[0.5em] text-[11px] font-semibold font-sans drop-shadow-sm">The Final Countdown</span>
+                  <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-brand-champagne/60" />
                 </div>
                 
-                <h2 className="text-5xl sm:text-7xl font-display text-white tracking-tight mb-6 drop-shadow-sm">
-                  Until We Say <span className="italic text-brand-primary-light font-light">"I Do"</span>
+                <h2 className="text-5xl sm:text-7xl font-display text-white tracking-tight mb-6 drop-shadow-md">
+                  Until We Say <span className="italic text-brand-champagne font-light">"I Do"</span>
                 </h2>
                 
-                <p className="text-lg sm:text-xl font-serif italic text-white/80 mb-12 sm:mb-16 max-w-2xl text-center leading-relaxed">
+                <p className="text-lg sm:text-xl font-serif italic text-white/90 mb-12 sm:mb-16 max-w-2xl text-center leading-relaxed drop-shadow-sm">
                   Time is standing still as we eagerly await the moment our forever begins.
                 </p>
 

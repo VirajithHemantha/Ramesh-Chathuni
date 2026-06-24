@@ -47,47 +47,51 @@ export const RSVPForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-6 relative py-10">
+    <div className="max-w-5xl mx-auto px-6 relative py-10" style={{ perspective: '1500px' }}>
       <AnimatePresence mode="wait">
         {!isRevealed ? (
           <motion.div
             key="cover"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-md mx-auto bg-brand-champagne p-12 sm:p-20 rounded-[3rem] shadow-[0_20px_40px_rgba(0,0,0,0.05)] text-center border border-brand-primary/10 flex flex-col items-center justify-center min-h-[550px] relative overflow-hidden"
+            initial={{ opacity: 0, rotateY: 90 }}
+            animate={{ opacity: 1, rotateY: 0 }}
+            exit={{ opacity: 0, rotateY: -90 }}
+            transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+            className="max-w-[340px] w-full mx-auto bg-brand-champagne p-10 rounded-[2.5rem] shadow-[0_15px_30px_rgba(0,0,0,0.08)] text-center border border-brand-primary/10 flex flex-col items-center justify-between min-h-[360px] relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-20 pointer-events-none" />
 
-            <p className="text-brand-primary-deep font-serif italic text-2xl mb-6 relative z-10">Kindly</p>
-            <h2 className="text-5xl font-display text-brand-dark tracking-[0.3em] mb-16 uppercase relative z-10">RSVP</h2>
+            <div className="relative z-10 w-full flex flex-col items-center pt-2">
+              <p className="text-brand-primary-deep font-serif italic text-xl mb-3">Kindly</p>
+              <h2 className="text-3xl sm:text-4xl font-display text-brand-dark tracking-[0.3em] uppercase ml-2">RSVP</h2>
+            </div>
             
-            <div className="w-24 h-24 rounded-full border-[1.5px] border-brand-primary flex flex-col items-center justify-center mb-16 relative z-10 shadow-sm bg-white/30 backdrop-blur-sm">
-              <div className="absolute inset-1.5 border border-brand-primary/40 rounded-full" />
-              <span className="text-brand-primary-deep font-serif text-xl tracking-widest">C</span>
-              <div className="w-6 h-[1px] bg-brand-primary/50 my-1" />
-              <span className="text-brand-primary-deep font-serif text-xl tracking-widest">R</span>
+            <div className="w-20 h-20 rounded-full border border-brand-primary flex flex-col items-center justify-center relative z-10 shadow-sm bg-white/40 backdrop-blur-sm my-6 cursor-pointer group hover:scale-105 transition-transform duration-500" onClick={() => setIsRevealed(true)}>
+              <div className="absolute inset-1 border border-brand-primary/30 rounded-full group-hover:rotate-180 transition-transform duration-700" />
+              <span className="text-brand-primary-deep font-serif text-lg leading-none mt-1">R</span>
+              <div className="w-5 h-[1px] bg-brand-primary/40 my-1" />
+              <span className="text-brand-primary-deep font-serif text-lg leading-none">C</span>
             </div>
 
-            <p className="text-[10px] sm:text-[11px] font-sans tracking-[0.4em] text-brand-primary-deep font-bold mb-8 uppercase relative z-10">
-              By 01.08.2026
-            </p>
+            <div className="relative z-10 w-full flex flex-col items-center pb-2">
+              <p className="text-[9px] font-sans tracking-[0.3em] text-brand-primary-deep font-bold mb-4 uppercase">
+                By 14.07.2026
+              </p>
 
-            <button
-              onClick={() => setIsRevealed(true)}
-              className="group relative z-10 inline-flex items-center gap-3 bg-black/40 hover:bg-black/50 backdrop-blur-md px-6 py-3 rounded-full transition-all duration-300 shadow-md"
-            >
-              <div className="w-2 h-2 rounded-full bg-white group-hover:scale-125 transition-transform duration-300 shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-              <span className="text-[9px] font-sans tracking-[0.2em] text-white font-bold uppercase drop-shadow-sm">Tap to reveal</span>
-            </button>
+              <button
+                onClick={() => setIsRevealed(true)}
+                className="group inline-flex items-center gap-2 bg-black/40 hover:bg-black/50 backdrop-blur-md px-5 py-2.5 rounded-full transition-all duration-300 shadow-md"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-white group-hover:scale-125 transition-transform duration-300 shadow-[0_0_5px_rgba(255,255,255,0.8)]" />
+                <span className="text-[8px] font-sans tracking-[0.2em] text-white font-bold uppercase drop-shadow-sm">Tap to reveal</span>
+              </button>
+            </div>
           </motion.div>
         ) : (
           <motion.div 
             key="form"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ opacity: 0, rotateY: 90 }}
+            animate={{ opacity: 1, rotateY: 0 }}
+            transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
             className="glass p-10 sm:p-14 lg:p-16 rounded-[3rem] border border-white/40 shadow-[0_30px_60px_rgba(0,0,0,0.05)] relative overflow-hidden bg-white/60 backdrop-blur-3xl lg:flex items-center gap-16"
           >
             <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-brand-primary/40 via-brand-primary-light to-brand-primary/40" />

@@ -42,20 +42,20 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ delay: i * 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-col items-center min-w-[90px] sm:min-w-[130px] relative group"
+          className="flex flex-col items-center min-w-[90px] sm:min-w-[140px] relative group"
         >
-          {/* Glass background arch */}
-          <div className="absolute inset-0 bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_15px_30px_rgba(0,0,0,0.2)] rounded-[3rem_3rem_1rem_1rem] sm:rounded-[4rem_4rem_1.5rem_1.5rem] group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-700 ease-out group-hover:-translate-y-3 pointer-events-none" />
+          {/* Elegant arched box background */}
+          <div className="absolute inset-0 bg-black/15 border border-white/5 shadow-inner shadow-white/5 rounded-[3rem_3rem_1rem_1rem] sm:rounded-[5rem_5rem_1.5rem_1.5rem] group-hover:bg-black/20 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-700 ease-out group-hover:-translate-y-2 pointer-events-none" />
 
-          <div className="relative pt-10 pb-8 px-4 flex flex-col items-center w-full z-10 transition-transform duration-700 group-hover:-translate-y-3">
+          <div className="relative pt-12 pb-10 px-4 flex flex-col items-center w-full z-10 transition-transform duration-700 group-hover:-translate-y-2">
             {/* Elegant number */}
-            <span className="text-5xl sm:text-6xl lg:text-7xl font-display font-medium text-white mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] tabular-nums tracking-wide">
+            <span className="text-5xl sm:text-6xl lg:text-7xl font-display text-white mb-5 drop-shadow-sm tabular-nums tracking-wider">
               {String(item.value).padStart(2, '0')}
             </span>
-            {/* Divider line */}
-            <div className="w-10 h-[1.5px] bg-gradient-to-r from-transparent via-brand-primary-light/50 to-transparent mb-4" />
+            {/* Soft gradient divider */}
+            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-brand-champagne/40 to-transparent mb-5" />
             {/* Label */}
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.4em] text-white/80 font-semibold">{item.label}</span>
+            <span className="text-[9px] sm:text-[11px] uppercase tracking-[0.4em] text-white/90 font-bold font-sans drop-shadow-sm">{item.label}</span>
           </div>
         </motion.div>
       ))}
