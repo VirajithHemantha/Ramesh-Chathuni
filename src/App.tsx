@@ -46,6 +46,39 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    const playAudio = () => {
+      if (audioRef.current && !isMusicPlaying) {
+        audioRef.current.play().then(() => {
+          setIsMusicPlaying(true);
+        }).catch(err => {
+          console.log("Autoplay blocked, waiting for interaction");
+        });
+      }
+    };
+
+    // Attempt to play immediately (may be blocked by browser)
+    playAudio();
+
+    // Unlock audio on first user interaction
+    const handleInteraction = () => {
+      playAudio();
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('touchstart', handleInteraction);
+      document.removeEventListener('scroll', handleInteraction);
+    };
+
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('touchstart', handleInteraction);
+    document.addEventListener('scroll', handleInteraction, { once: true });
+
+    return () => {
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('touchstart', handleInteraction);
+      document.removeEventListener('scroll', handleInteraction);
+    };
+  }, [isMusicPlaying]);
+
   if (isClosed) {
     return (
       <div className="relative min-h-screen bg-brand-ivory flex items-center justify-center p-6 text-center">
