@@ -74,12 +74,22 @@ export const IntroVideo: React.FC<IntroVideoProps> = ({ onComplete }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1.5 }}
-          className="flex items-center gap-4"
+          className="flex items-center gap-4 mb-12"
         >
           <div className="w-12 sm:w-20 h-[1px] bg-white/60" />
           <p className="text-white/90 uppercase tracking-[0.4em] text-xs sm:text-sm font-serif drop-shadow-md">Wedding Invitation</p>
           <div className="w-12 sm:w-20 h-[1px] bg-white/60" />
         </motion.div>
+
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.5, duration: 1 }}
+          onClick={onComplete}
+          className="pointer-events-auto px-8 py-3 rounded-full border border-white/40 text-white font-sans text-xs tracking-[0.2em] uppercase hover:bg-white/20 hover:border-white transition-all duration-300 backdrop-blur-md shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+        >
+          View Invitation
+        </motion.button>
       </motion.div>
     </div>
   );
