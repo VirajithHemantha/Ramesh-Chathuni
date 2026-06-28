@@ -27,9 +27,7 @@ export const WelcomeMessage: React.FC = () => {
             <p>
               This ceremony and celebration mark the beginning of a new chapter in both of our lives. As we reflect on the journey that has brought us to this day, we are filled with gratitude for the many meaningful moments we have each shared with you, whether at family gatherings, through school and college friendships, or alongside colleagues at work.
             </p>
-            <p>
-              Each of you, and every one of those memories, has shown us love, care, and support, reminding us of how fortunate we are to have you in our lives as we begin this journey together.
-            </p>
+
             <p>
               We warmly invite your presence, your blessings, and your joyful energy on this very special occasion of our lives. Your support, encouragement, love, and laughter would mean the world to us on this day.
             </p>

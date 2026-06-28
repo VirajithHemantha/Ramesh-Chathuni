@@ -28,16 +28,13 @@ export const Footer: React.FC = () => {
           </svg>
 
           {/* Central Logo Disk */}
-          <div className="absolute inset-[3rem] bg-white rounded-full shadow-[0_10px_30px_rgba(70,130,180,0.1)] flex flex-col items-center justify-center border-[4px] sm:border-[5px] border-brand-primary/30 group-hover:scale-110 group-hover:border-brand-primary/50 transition-all duration-700 ease-out z-10">
-            <Heart className="w-4 h-4 text-brand-pink mb-0.5 fill-brand-pink/20 animate-pulse" />
-            <span className="font-display text-3xl text-brand-primary drop-shadow-sm leading-none tracking-tighter">C<span className="text-lg font-serif italic mx-0.5 text-stone-400">&</span>R</span>
+          <div className="absolute inset-[3rem] bg-white rounded-full overflow-hidden shadow-[0_10px_30px_rgba(70,130,180,0.1)] flex flex-col items-center justify-center border-[4px] sm:border-[5px] border-brand-primary/30 group-hover:scale-110 group-hover:border-brand-primary/50 transition-all duration-700 ease-out z-10">
+            <img src="/images/f.jpg" alt="Logo" className="w-full h-full object-cover" />
           </div>
 
           {/* Interactive ambient hover glow */}
           <div className="absolute inset-0 bg-brand-primary/20 rounded-full blur-2xl pointer-events-none group-hover:bg-brand-primary-light/30 transition-colors duration-700 -z-10" />
         </div>
-
-        <h2 className="text-4xl sm:text-5xl font-display text-stone-800 mb-6 tracking-tight drop-shadow-sm">Chathuni & Ramesh</h2>
         <p className="text-stone-500 font-serif italic text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-16">
           "A journey of a thousand miles begins with a single step, and we're so incredibly happy to take it together."
         </p>

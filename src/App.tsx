@@ -11,10 +11,10 @@ import { CoupleDetails } from './components/CoupleDetails';
 // Removed Gallery import
 import { AddressesSection } from './components/AddressesSection';
 import { RSVPForm } from './components/RSVPForm';
+import { WishesForm } from './components/WishesForm';
 import { Footer } from './components/Footer';
 import { IntroVideo } from './components/IntroVideo';
 
-import { HeroContent } from './components/HeroContent';
 import { CornerFlowers } from './components/CornerFlowers';
 import { WelcomeMessage } from './components/WelcomeMessage';
 import { SaveTheDate } from './components/SaveTheDate';
@@ -109,8 +109,6 @@ export default function App() {
 
 
 
-            <HeroContent />
-
             <section id="couple" className="py-16 sm:py-32 bg-gradient-to-b from-brand-ivory via-brand-champagne to-[#F4F6F2] relative overflow-hidden">
               <CornerFlowers position="top-right" opacity={0.6} scale={1.5} />
               <CornerFlowers position="bottom-left" opacity={0.6} scale={1.5} />
@@ -163,6 +161,12 @@ export default function App() {
             </section>
 
             <WelcomeMessage />
+
+            <section id="wishes" className="py-16 sm:py-32 bg-gradient-to-b from-brand-ivory to-[#F4F6F2] relative overflow-hidden">
+              <CornerFlowers position="top-left" opacity={0.4} scale={1.6} />
+              <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')] opacity-20 pointer-events-none" />
+              <WishesForm />
+            </section>
 
             <Footer />
           </motion.main>
